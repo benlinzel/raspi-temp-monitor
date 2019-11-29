@@ -1,0 +1,10 @@
+[Unit]
+Description=Raspberry Pi Temp Monitor HTTP Server
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /home/pi/raspi-temp-monitor/http_server.py
+
+[Install]
+WantedBy=multi-user.target
