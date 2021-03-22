@@ -45,8 +45,10 @@ def check_snooze():
 		r = requests.get(SNOOZE_HOST)
 		if(r.status_code == 200):
 			print(r.status_code)
-			if(r.lower() == "true"):
-				print(r)
+			print(r.text)
+			print(r)
+			if(r.text.lower() == "true"):
+				print(r.text)
 				print("snooze active")
 				return True
 	except: 
