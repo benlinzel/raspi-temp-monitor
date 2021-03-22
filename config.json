@@ -2,10 +2,10 @@
 	"tempMonitor": {
 		"roomName": "Example Room",
 		"intervalSeconds": 900,
-		"tempFreezingCelsuis": 19.0,
-		"tempChillyCelsuis": 21.0,
-		"tempWarmCelsuis": 27.0,
-		"tempHotCelsuis": 29.0
+		"tempFreezingCelsuis": 18.0,
+		"tempChillyCelsuis": 20.0,
+		"tempWarmCelsuis": 28.0,
+		"tempHotCelsuis": 30.0
 	},
 	"httpServer": {
 		"port": 8000

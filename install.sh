@@ -11,6 +11,7 @@ echo "Installing raspi-temp-monitor"
 touch .env
 echo "PUSHOVER_USER=" >> .env
 echo "PUSHOVER_TOKEN=" >> .env
+echo "SNOOZE_HOST=" >> .env
 sudo chown pi:pi .env
 
 echo "Copying service files to /lib/systemd/system..."
