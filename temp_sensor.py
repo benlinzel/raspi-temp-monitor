@@ -49,6 +49,18 @@ def read_temp():
 		temp_c = float(temp_string) / 1000.0
 		temp_f = temp_c * 9.0 / 5.0 + 32.0
 
+# Return true if host says snoozed, false otherwise
+def check_snooze():
+	try:
+		r = requests.get(SNOOZE_HOST)
+		if(r.status_code == 200):
+			if(r.lower() == "true"):
+				print("snooze active")
+				return True
+	except: 
+		print("could not check snooze service")
+	return False
+
 	# TEST OVERRIDE
 	# temp_c = 30.0
 
@@ -99,17 +111,6 @@ def read_temp():
 
 	return temp_c, temp_f
 
-	# Return true if host says snoozed, false otherwise
-	def check_snooze():
-		try:
-			r = requests.get(SNOOZE_HOST)
-			if(r.status_code == 200):
-				if(r.lower() == "true"):
-					print("snooze active")
-					return True
-		except: 
-			print("could not check snooze service")
-		return False
 	
 while True:
 	print(read_temp())	
