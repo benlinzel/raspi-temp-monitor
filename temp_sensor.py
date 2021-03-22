@@ -41,14 +41,9 @@ def read_temp_raw():
 # Return true if host says snoozed, false otherwise
 def check_snooze():
 	try:
-		print(SNOOZE_HOST)
 		r = requests.get(SNOOZE_HOST)
 		if(r.status_code == 200):
-			print(r.status_code)
-			print(r.text)
-			print(r)
 			if(r.text.lower() == "true"):
-				print(r.text)
 				print("snooze active")
 				return True
 	except: 
