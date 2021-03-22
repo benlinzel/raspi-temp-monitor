@@ -74,7 +74,7 @@ def read_temp():
 		if(not check_snooze()):
 			# r = requests.post(pushover_url, data={"token":PUSHOVER_TOKEN,"user":PUSHOVER_USER,"title":title,"message":msg,"priority":priority}, files={"attachment":open("/home/pi/raspi-temp-monitor/gifs/freezing.gif","rb")})
 			r = requests.post(pushover_url, data={"token":PUSHOVER_TOKEN,"user":PUSHOVER_USER,"title":title,"message":msg,"priority":priority})
-		print(r)
+			print(r)
 
 	elif (temp_c <= temp_c_chilly):
 		title = "Low Temp Warning"
@@ -84,7 +84,7 @@ def read_temp():
 		if(not check_snooze()):
 			# r = requests.post(pushover_url, data={"token":PUSHOVER_TOKEN,"user":PUSHOVER_USER,"title":title,"message":msg,"priority":priority}, files={"attachment":open("/home/pi/raspi-temp-monitor/gifs/chilly.gif","rb")})
 			r = requests.post(pushover_url, data={"token":PUSHOVER_TOKEN,"user":PUSHOVER_USER,"title":title,"message":msg,"priority":priority})
-		print(r)
+			print(r)
 
 	elif (temp_c >= temp_c_hot):
 		title = "Very High Temp Alert"
@@ -94,7 +94,7 @@ def read_temp():
 		if(not check_snooze()):
 			# r = requests.post(pushover_url, data={"token":PUSHOVER_TOKEN,"user":PUSHOVER_USER,"title":title,"message":msg,"priority":priority}, files={"attachment":open("/home/pi/raspi-temp-monitor/gifs/hot.gif","rb")}) 
 			r = requests.post(pushover_url, data={"token":PUSHOVER_TOKEN,"user":PUSHOVER_USER,"title":title,"message":msg,"priority":priority})
-		print(r)
+			print(r)
 
 	elif (temp_c >= temp_c_warm):
 		title = "High Temp Warning"
@@ -104,7 +104,7 @@ def read_temp():
 		if(not check_snooze()):
 			# r = requests.post(pushover_url, data={"token":PUSHOVER_TOKEN,"user":PUSHOVER_USER,"title":title,"message":msg,"priority":priority}, files={"attachment":open("/home/pi/raspi-temp-monitor/gifs/warm2.gif","rb")}) 
 			r = requests.post(pushover_url, data={"token":PUSHOVER_TOKEN,"user":PUSHOVER_USER,"title":title,"message":msg,"priority":priority})
-		print(r)
+			print(r)
 
 	else:
 		print("temp within safe zone")
