@@ -104,7 +104,7 @@ def read_temp():
 		try:
 			r = requests.get(SNOOZE_HOST)
 			if(r.status_code == 200):
-				if(r.lower() == "true"){
+				if(r.lower() == "true"):
 					print("snooze active")
 					return True
 				}
