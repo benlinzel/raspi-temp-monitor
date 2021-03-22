@@ -107,7 +107,6 @@ def read_temp():
 				if(r.lower() == "true"):
 					print("snooze active")
 					return True
-				}
 		except: 
 			print("could not check snooze service")
 		return False
